@@ -2,11 +2,11 @@
 body
 {
     font-family: arial, sans-serif;
-    background: #ccc;
+    background: white;
 }
 main
 {
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 
@@ -14,7 +14,7 @@ main
 /* CABEÇALHO 1 */
 .cabeçalho1
 {
-    height: 500px;
+    height: 400px;
     background-image:url(../imagens/bg-4.jpg);
     background-position: right center;
     background-size: cover;
@@ -24,6 +24,7 @@ main
     text-align: center;
     color:white;
     margin-top: 150px;
+    border-radius: 5px;
 }
 .cabeçalho1-content h1
 {
@@ -31,15 +32,18 @@ main
     margin-right: 350px;
     margin-left: 350px;
     padding: 10px;
+    border-radius: 5px;
     border-bottom: 2px solid white;
     text-transform:uppercase;
     font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
     letter-spacing: 2px;
     text-shadow: 3px 3px 5px black;
 }
 .cabeçalho1-content p
 {
     font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
     letter-spacing: 1px;
     text-shadow: 3px 3px 5px black;
 }
@@ -58,49 +62,67 @@ main
 }
 .cabeçalho1 nav a
 {
-    background: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     display: block;
     padding: 15px;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 12px;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 .cabeçalho1 nav a:hover
 {
-    background: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: background-color .3s linear;
 }
 
 
 /* CARDS */
 .card-container
 {
-    /* background-color: red; */
-    background-color: white;
-    padding: 3px;
-    margin-top: 15px;
-    overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+    background-color: rgb(255, 255, 255);
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
-.card
+.card-container div
 {
-    width: 23%;
-    float: left;
-    box-sizing: border-box;
-    margin: 1%;
-    /* background-color: yellow; */
+    width: 200px;
+    height: 150px;
+    display: inline-block;
+    text-align: center;
+    transition: 0.2s ease-out;
 }
-.card img
+.card-container div:hover
 {
-    width: 100%;
-    display: block;
+    width: 210px;
+    height: 160px;
 }
-.card p
+.card-container div img
+{
+    width: 125px;
+    height: 125px;
+    opacity: 1;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: 0.2s ease-out;
+}
+.card-container div img:hover
+{
+    opacity: 0.3;
+}
+.card-container div p
 {
     font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    letter-spacing: 3px;
     color: white;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.7);
@@ -108,9 +130,34 @@ main
 
 
 /* SEÇÕES */
-.section-container
+.section-container0
 {
     background-color: white;
+    border: solid 1px #ccc;
+    padding: 10px;
+    margin-top: 15px;
+    overflow: auto;
+}
+.section-container1
+{
+    background-color: white;
+    border: solid 1px #ccc;
+    padding: 10px;
+    margin-top: 15px;
+    overflow: auto;
+}
+.section-container2
+{
+    background-color: white;
+    border-bottom: solid 1px #ccc;
+    padding: 10px;
+    margin-top: 15px;
+    overflow: auto;
+}
+.section-container3
+{
+    background-color: white;
+    border-bottom: solid 1px #ccc;
     padding: 10px;
     margin-top: 15px;
     overflow: auto;
